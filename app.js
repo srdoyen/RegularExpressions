@@ -21,8 +21,20 @@ re = /Hel{2,4}o/i;
 //Parentheses () - Grouping
 re = /([0-9]x){3}/;
 
+//Shorthand Character Classes
+re = /\w/; //Word character - alphanumeric character
+re = /\W/; //Non Word character
+re = /\d+/; //Match any digit
+re = /\D/; //Non-digit
+re = /\s/; //Match whitespace char
+re = /Hell\b/i; //Word Boundary
+
+//Assertions
+re = /x(?=y)/; //Match x only if followed by y
+re = /x(?!y)/; //Match x only if NOT followed by y
+
 //String to match
-const str = "3x3x3x";
+const str = "xy";
 //const str = "";
 const result = re.exec(str);
 console.log(result);
