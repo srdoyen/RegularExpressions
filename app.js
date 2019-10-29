@@ -14,10 +14,15 @@ re = /[^GF]ray/i; //must be anything except a G or F
 re = /[A-Z]ray/; //Match any uppercase letter
 re = /[0-9]ray/; //Match any digit
 
-//Brackets [] - Character sets
+//Braces {} - Character sets
+re = /Hel{2}o/i;
+re = /Hel{2,4}o/i;
+
+//Parentheses () - Grouping
+re = /([0-9]x){3}/;
 
 //String to match
-const str = "1ray";
+const str = "3x3x3x";
 //const str = "";
 const result = re.exec(str);
 console.log(result);
