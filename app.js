@@ -33,8 +33,12 @@ re = /Hell\b/i; //Word Boundary
 re = /x(?=y)/; //Match x only if followed by y
 re = /x(?!y)/; //Match x only if NOT followed by y
 
+//other
+re = /^[0-9]{5}(-[0-9]{4})?$/;
+re = /^\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}$/;
+
 //String to match
-const str = "xy";
+const str = "214 337 9108";
 //const str = "";
 const result = re.exec(str);
 console.log(result);
